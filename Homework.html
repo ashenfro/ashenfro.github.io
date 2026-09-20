@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Lockes | Liberty, Equity & Opportunity</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body class="light-theme">
+
+    <!-- Navigation Header -->
+    <header class="navbar">
+        <div class="logo">The Lockes</div>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#philosophy">Philosophy</a></li>
+                <li><a href="#issues">Key Issues</a></li>
+                <li><a href="#quiz">Voter Match</a></li>
+            </ul>
+        </nav>
+        <button id="theme-toggle" class="btn-secondary">🌙 Dark Mode</button>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Consent, Liberty & Equal Opportunity</h1>
+            <p>A modern political vision rooted in Locke's fundamental principle: government exists solely to protect your natural rights.</p>
+            <div class="hero-buttons">
+                <a href="#issues" class="btn-primary">Explore Our Platform</a>
+                <button id="open-quote-modal" class="btn-secondary">Read Locke's Quote</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Ideology Factors -->
+    <section id="about" class="container">
+        <h2 class="section-title">Factors Shaping Our Ideology</h2>
+        <div class="grid-3">
+            <div class="card">
+                <h3>Social Equality</h3>
+                <p>Protecting minority rights and LGBTQ rights ensures every individual retains fundamental agency without societal oppression.</p>
+            </div>
+            <div class="card">
+                <h3>Economic Access</h3>
+                <p>Publicly funding health assistance and education creates a fair baseline where equal opportunity can truly thrive.</p>
+            </div>
+            <div class="card">
+                <h3>Human Nature</h3>
+                <p>Individuals are naturally free, equal, and independent. Legitimate power exists strictly through the consent of the governed.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Issues Section (Interactive Tabs) -->
+    <section id="issues" class="container bg-alt">
+        <h2 class="section-title">Key Policy Positions</h2>
+        
+        <div class="tab-buttons">
+            <button class="tab-btn active" onclick="switchTab('healthcare')">Healthcare & Medical Assistance</button>
+            <button class="tab-btn" onclick="switchTab('education')">Public Education</button>
+            <button class="tab-btn" onclick="switchTab('rights')">Minority & LGBTQ Rights</button>
+        </div>
+
+        <div id="healthcare" class="tab-content active">
+            <h3>Universal Healthcare & Free Medical Assistance</h3>
+            <p><strong>Position:</strong> Guarantee medical care so no citizen suffers financially due to illness.</p>
+            <p><strong>Action Plan:</strong> Expand public coverage for essential treatments, preventive care, and emergency services.</p>
+            <p><strong>Voter Appeal:</strong> Ensures individual health struggles do not strip away a person's freedom and independence.</p>
+        </div>
+
+        <div id="education" class="tab-content">
+            <h3>Accessible Public Education</h3>
+            <p><strong>Position:</strong> Fully fund public education to lower out-of-pocket tuition costs and improve resources.</p>
+            <p><strong>Action Plan:</strong> Increase school grants, expand university funding, and ease debt burdens on students.</p>
+            <p><strong>Voter Appeal:</strong> Empowers every individual with the tools needed to succeed in modern society.</p>
+        </div>
+
+        <div id="rights" class="tab-content">
+            <h3>Minority & LGBTQ Rights Protection</h3>
+            <p><strong>Position:</strong> Codify robust protections against discrimination for all minority and LGBTQ citizens.</p>
+            <p><strong>Action Plan:</strong> Enforce strict equal-rights legislation in employment, housing, and public services.</p>
+            <p><strong>Voter Appeal:</strong> Upholds the fundamental truth that all humans are born free and equal.</p>
+        </div>
+    </section>
+
+    <!-- Interactive Voter Match Quiz -->
+    <section id="quiz" class="container">
+        <h2 class="section-title">Do You Align with The Lockes?</h2>
+        <div class="quiz-box">
+            <p id="quiz-question">1. Should essential healthcare be free and accessible to every citizen regardless of income?</p>
+            <div class="quiz-options">
+                <button onclick="answerQuiz(true)">Yes, absolutely</button>
+                <button onclick="answerQuiz(false)">No, keep it private</button>
+            </div>
+            <div id="quiz-result" class="hidden"></div>
+        </div>
+    </section>
+
+    <!-- Locke Quote Modal -->
+    <div id="modal" class="modal hidden">
+        <div class="modal-content">
+            <span id="close-modal" class="close">&times;</span>
+            <h2>John Locke's Core Foundation</h2>
+            <blockquote cite="https://www.gutenberg.org/files/7370/7370-h/7370-h.htm">
+                "Men being, as has been said, by nature, all free, equal, and independent, no one can be put out of this estate, and subjected to the political power of another, without his own consent."
+            </blockquote>
+            <p><em>— Second Treatise of Government (1689)</em></p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 The Lockes Political Party. Social 30-1 Ideology Project.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
